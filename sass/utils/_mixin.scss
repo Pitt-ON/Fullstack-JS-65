@@ -1,0 +1,17 @@
+@mixin section($pt, $pb, $bgc) {
+  padding-top: $pt;
+  padding-bottom: $pb;
+  background-color: $bgc;
+}
+
+@mixin flex($fw: null, $d: flex, $jc: center, $ai: center, $gap: $gap) {
+  flex-wrap: $fw;
+  display: $d;
+  justify-content: $jc;
+  align-items: $ai;
+  gap: $gap;
+}
+
+@mixin item($q-gap, $gap, $q-item) {
+  flex-basis: calc((100% - #{$q-gap} * #{$gap}) / #{$q-item});
+}

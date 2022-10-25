@@ -1,0 +1,167 @@
+.menu-btn {
+    @include flex();
+
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin-left: auto;
+
+    background-color: transparent;
+    border: none;
+
+    cursor: pointer;
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+
+.menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100%;
+    padding: 40px 48px;
+
+    background-color: $basic-bg-cl;
+
+    transform: translateX(100%);
+    transition: transform 400ms;
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+
+    &.is-open {
+        transform: translateX(0);
+    }
+}
+
+.menu-toggle {
+    @include flex();
+
+    position: absolute;
+    top: 10px;
+    right: 15px;
+
+    width: 40px;
+    height: 40px;
+
+    padding: 0;
+    border: none;
+    background-color: transparent;
+
+    cursor: pointer;
+
+    transition: fill $animation;
+
+    &:hover,
+    &:focus {
+        fill: $accent-bg-cl;
+    }
+}
+
+.mobile-menu {
+    @extend %list;
+
+    margin-bottom: auto;
+
+    &__item {
+        margin-bottom: 35px;
+    }
+
+    &__item:last-child {
+        margin-bottom: 0;
+    }
+
+    &__link {
+        @extend %link;
+
+        display: block;
+        font-weight: 500;
+        font-size: 40px;
+        line-height: calc(47 / 40);
+        letter-spacing: 0.02em;
+        color: $basic-txt-cl;
+
+        margin-left: auto;
+
+        transition: color $animation;
+
+        &:hover,
+        &:focus {
+            color: $accent-txt-cl;
+        }
+
+        &--current {
+            color: $accent-txt-cl;
+        }
+    }
+}
+
+.mobile-contacts {
+    @extend %list;
+
+    margin-bottom: 64px;
+
+    &__tel {
+        @extend %link;
+
+        display: block;
+        font-weight: 500;
+        font-size: 34px;
+        line-height: calc(40 / 34);
+        letter-spacing: 0.02em;
+        color: $accent-txt-cl;
+        margin-bottom: 32px;
+        margin-left: auto;
+
+        @media screen and (max-width: 479px) {
+            font-size: 7vw;
+        }
+    }
+
+    &__mail {
+        @extend %link;
+
+        display: block;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: calc(28 / 24);
+        letter-spacing: 0.02em;
+        color: $secondary-txt-cl;
+        margin-left: auto;
+    }
+}
+
+.mobile-socials {
+    @extend %list;
+
+    @include flex(wrap, flex, null, center, null);
+
+
+    &__link {
+        @extend %link;
+
+        display: block;
+
+        font-weight: 500;
+        font-size: 18px;
+        line-height: calc(22 / 18);
+        letter-spacing: 0.02em;
+        color: $accent-txt-cl;
+        margin-left: auto;
+
+        &--border {
+            padding-right: 10px;
+            border-right: 1px solid rgba(33, 33, 33, 0.2);
+            margin-right: 10px;
+        }
+    }
+}

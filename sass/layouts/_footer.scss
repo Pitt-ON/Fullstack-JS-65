@@ -1,0 +1,31 @@
+.footer {
+  @include section(60px, 60px, $hdr-ftr-bg-cl);
+
+  &__container {
+    @media screen and (min-width: 1200px) {
+      @include flex(null, flex, space-around, baseline, null);
+    }
+  }
+
+  &__tablet {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      @include flex(null, flex, space-around, baseline, null);
+      margin-bottom: 60px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      @include flex(null, flex, start, baseline, 70px);
+    }
+  }
+
+  &__logo {
+    display: block;
+    margin-bottom: 20px;
+
+    text-align: center;
+
+    @media screen and (min-width: 1200px) {
+      text-align: left;
+    }
+  }
+}

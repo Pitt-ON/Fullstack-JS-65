@@ -1,0 +1,55 @@
+.footer-contacts {
+  font-style: normal;
+  text-align: center;
+  margin-bottom: 60px;
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 231px;
+    text-align: left;
+    margin-bottom: 0;
+  }
+
+  &__list {
+    @extend %list;
+  }
+
+  &__text {
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: calc(24 / 14);
+    letter-spacing: 0.03em;
+    color: $light-txt-cl;
+
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 9px;
+    }
+  }
+
+  &__item {
+    margin-bottom: 8px;
+
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 9px;
+    }
+  }
+
+  &__link {
+    @extend %link;
+
+    font-size: 14px;
+    line-height: calc(24 / 14);
+    letter-spacing: 0.03em;
+    color: hsla(0, 0%, 100%, 0.6);
+
+    transition: color $animation;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: $accent-txt-cl;
+  }
+}

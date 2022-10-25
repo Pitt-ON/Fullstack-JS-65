@@ -1,0 +1,7 @@
+.portfolio {
+  @include section(60px, 60px, null);
+
+  @media screen and (min-width: 1200px) {
+    @include section(94px, 94px, null);
+  }
+}

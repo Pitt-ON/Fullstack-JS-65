@@ -1,0 +1,23 @@
+.logo {
+  @extend %link;
+
+  font-family: $secondary-font;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: calc(28 / 24);
+  letter-spacing: 0.03em;
+  color: $accent-txt-cl;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+    line-height: calc(31 / 26);
+  }
+
+  &__dark {
+    color: $logo-txt-cl;
+  }
+
+  &__light {
+    color: $light-txt-cl;
+  }
+}
