@@ -665,3 +665,250 @@
 // }, 0);
 // console.log(totalAveragePlaytimePerGame);
 
+
+// Практика з ментором 19.11.2022
+
+
+// 1. Напишіть функцію calcTotalPrice(stones, stonesName),
+//яка приймає масив об'єктів і
+//рядок з назвою каменю.
+//Функція повертає загальну вартість каміння
+//з таким ім'ям
+
+// const stones = [
+//   { name: "Emerald", price: 1300, quantity: 4 },
+//   { name: "Diamond", price: 2700, quantity: 6 },
+//   { name: "Sapphire", price: 400, quantity: 7 },
+//   { name: "Rubble", price: 150, quantity: 100 },
+// ];
+
+
+// const calcTotalPrice = (stones, stonesName) => {
+//   // return stones.reduce((sum, item) => {
+//   //   console.log(sum)
+//   //   console.log(item)
+//   //   if (item.name.toLowerCase() === stonesName) {
+//   //     return item.price * item.quantity
+
+//   //   }
+//   //   return sum;
+//   // }, 0)
+  
+  
+//   // const { price, quantity } = stones.filter(({ name }) => name === stonesName)[0]
+//   // return price * quantity
+
+//   const { price, quantity } = stones.find(({ name }) => name === stonesName)
+//   return price * quantity;
+// }
+// console.log(calcTotalPrice(stones, 'Diamond'));
+
+
+// 2. Перевірити, чи слово є паліндромом
+  
+// const palindromCheck = (word) => {
+//   return word.split('').reverse().join('') === word
+// }
+
+// console.log(palindromCheck("madam"));
+//   console.log(palindromCheck("banan"));
+//   console.log(palindromCheck("banab"));
+// console.log(palindromCheck("kantak"));
+
+
+// 36 Функція рахує і повертає суму всіх коштів (властивість balance),
+//  які зберігають користувачі з масиву users.
+// Change code below this line
+// const calculateTotalBalance = users => {
+//   return users.reduce((acc, user) => acc + user.balance, 0);
+// };
+// Change code above this line
+
+
+// 37 Функція рахувала і повертала загальну кількість друзів
+// (властивість friends) усіх користувачів з масиву users.
+// Change code below this line
+// const getTotalFriendCount = users => {
+//  return users.reduce((acc, user) => [...acc, ...user.friends], []).length;
+// };
+// Change code above this line
+
+
+// 38 Метод sort(). Зробити щоб копія масиву releaseDates, відсортована за
+// зростанням, а у змінній alphabeticalAuthors - копія масиву імен
+//  авторів authors, відсортована за алфавітом.
+// const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+// const authors = [
+//   "Tanith Lee",
+//   "Bernard Cornwell",
+//   "Robert Sheckley",
+//   "Fyodor Dostoevsky",
+// ];
+// // Change code below this line
+// // відсортовано за зростанням
+// const ascendingReleaseDates = [...releaseDates].sort();
+// console.log(ascendingReleaseDates);
+
+// // відсортовано за алфовітом
+// const alphabeticalAuthors = [...authors].sort();
+// console.log(alphabeticalAuthors);
+
+
+// 39 Метод sort(). Свій порядок сортування чисел.
+// const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+// // Change code below this line
+// // Відсортовано за зростанням
+// const ascendingReleaseDates = [...releaseDates].sort((a, b) => a - b);
+// console.log(ascendingReleaseDates);
+// // Відсортовано за спаданням
+// const descendingReleaseDates = [...releaseDates].sort((a, b) => b - a);
+// console.log(descendingReleaseDates);
+
+
+// 40 Метод sort(). Свій порядок сортування рядків.
+// const authors = [
+//   "Tanith Lee",
+//   "Bernard Cornwell",
+//   "Robert Sheckley",
+//   "Fyodor Dostoevsky",
+//   "Howard Lovecraft",
+// ];
+// // Change code below this line
+// Відсортовано за алфавітом
+// const authorsInAlphabetOrder = [...authors].sort((a, b) => a.localeCompare(b));
+// Відсортовано за алфавітом у зворотньому порядку
+// const authorsInReversedOrder = [...authors].sort((a, b) => b.localeCompare(a));
+
+
+// 41 Метод sort(). Сортування об'єктів.
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "The Dream of a Ridiculous Man",
+//     author: "Fyodor Dostoevsky",
+//     rating: 7.75,
+//   },
+//   { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+//   { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
+// ];
+// // Change code below this line
+// // Відсортовано за ім'ям автора в алфавітному порядку.
+// const sortedByAuthorName = [...books].sort((firstBook, secondBook) =>
+//   firstBook.author.localeCompare(secondBook.author));
+// console.log(sortedByAuthorName);
+
+// // Відсортовано за ім'ям автора у зворотному алфавітному порядку.
+// const sortedByReversedAuthorName = [...books].sort((firstBook, secondBook) =>
+//   secondBook.author.localeCompare(firstBook.author));
+// console.log(sortedByReversedAuthorName);
+
+// // Відсортовано за зростанням рейтингу.
+// const sortedByAscendingRating = [...books].sort((firstBook, secondBook) =>
+//   firstBook.rating - secondBook.rating);
+// console.log(sortedByAscendingRating);
+
+// // Відсортовано відсортований за спаданням рейтингу.
+// const sortedByDescentingRating = [...books].sort((firstBook, secondBook) =>
+//   secondBook.rating - firstBook.rating);
+// console.log(sortedByDescentingRating);
+
+
+// 42 Метод sort(). Масив відсортований за зростанням балансу (властивість balance).
+// Change code below this line
+// const sortByAscendingBalance = users => {
+//    return users.sort((a, b) => a.balance - b.balance)
+// };
+// Change code above this line
+
+
+// 43 Метод sort(). Масив відсортований за спаданням кількості їхніх друзів
+// (властивість friends).
+// Change code below this line
+// const sortByDescendingFriendCount = users => {
+//    return [...users].sort((a, b) => b.friends.length - a.friends.length)
+// };
+// Change code above this line
+
+
+// 44 Метод sort(). Масив користувачів, відсортований за їх ім'ям
+// (властивість name) в алфавітному порядку.
+// Change code below this line
+// const sortByName = users => {
+// return [...users].sort((a, b) => a.name.localeCompare(b.name))
+// };
+// Change code above this line
+
+
+// 45 Ланцюжки методів. У змінній names масив імен авторів в алфавітному порядку,
+//  рейтинг книг яких більший за значення змінної MIN_BOOK_RATING.
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "The Dream of a Ridiculous Man",
+//     author: "Fyodor Dostoevsky",
+//     rating: 7.75,
+//   },
+//   { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+//   {
+//     title: "The Dreams in the Witch House",
+//     author: "Howard Lovecraft",
+//     rating: 8.67,
+//   },
+// ];
+// const MIN_BOOK_RATING = 8;
+// // Change code below this line
+
+// const names = [...books]
+//   .filter(book => book.rating > MIN_BOOK_RATING)
+//   .map(book => book.author)
+//   .sort();
+
+
+// 46 Ланцюжки методів. Масив імен користувачів, відсортований за зростанням
+// кількості їхніх друзів (властивість friends).
+// Change code below this line
+// const getNamesSortedByFriendCount = users => {
+//   return [...users].sort((a, b) => a.friends.length - b.friends.length)
+//   .map(user => user.name)
+// };
+// Change code above this line
+
+
+// 47 Ланцюжки методів. Функція повертає масив унікальних імен друзів
+// (властивість friends), відсортований за алфавітом.
+// const getSortedFriends = users => {
+//   return users.flatMap(user => user.friends)
+//     .filter((friend, index, array) => array.indexOf(friend) === index)
+//   .sort((a, b) => a.localeCompare(b))
+// };
+// Change code above this line
+
+
+// 48 Ланцюжки методів. Функція повертає загальний баланс користувачів
+// (властивість balance), стать яких(властивість gender) збігається зі
+// значенням параметра gender.
+// Change code below this line
+// const getTotalBalanceByGender = (users, gender) => {
+//   return [...users]
+//     .filter(user => user.gender === gender)
+//     .reduce((totalBal, user) => totalBal + user.balance, 0)
+// };
+// Change code above this line
